@@ -11,6 +11,19 @@
  </a>
 </p>
 
+<div align="center">
+
+### ⚡ Engine Architecture & Local Runtime Stack
+
+```mermaid
+graph TD
+    A[Coding Agent / Host Interface] -->|MCP Protocol / JSON-RPC| B[Skill Execution Runtime]
+    B -->|Context Vectorization| C[Local PyTorch Engine / CUDA]
+    B -->|AST Validation & LINT| D[Static Code Grader]
+    C -->|Gradient Compute| E[Model Internals & KV Cache]
+    D -->|Evaluation Metrics| F[NDCG / Latency Benchmarks]
+
+
 Implement model internals, retrieval pipelines, and agent runtimes. Test them, inspect failures, and keep the code and evaluation results.
 
 **[Start learning](https://aiengineeringfromscratch.com/lesson?path=phases/00-setup-and-tooling/01-dev-environment)** · **[Choose a path](#learning-routes)** · **[Try a lab](#interactive-lab)** · **[Build a project](#project-challenges)** · **[Browse the curriculum](#contents)**

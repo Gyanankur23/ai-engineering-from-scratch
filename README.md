@@ -12,11 +12,11 @@
 </a>
 </p>
 
-**SYSTEM STATUS:** FORK OPERATIONAL [RUNNING LOCAL KERNEL & AGENT PROTOCOLS]  
-
-**WORKSPACE:** CUSTOM MODEL INTERNALS, RAG EVALS & AGENT RUNTIMES  
-
-**GRADER ENGINE:** STRICT VERIFICATION ENABLED (PASSED)
+<p align="center">
+  <img src="https://img.shields.io/badge/system%20status-fork%20operational%20[local%20kernel]-brightgreen?style=flat-square&labelColor=1a1a1a" alt="System Status">
+  <img src="https://img.shields.io/badge/workspace-custom%20model%20internals%20%7C%20rag%20%7C%20agents-blue?style=flat-square&labelColor=1a1a1a" alt="Workspace">
+  <img src="https://img.shields.io/badge/grader%20engine-strict%20verification%20(passed)-success?style=flat-square&labelColor=1a1a1a" alt="Grader Engine">
+</p>
 
 ### ⚡ Engine Architecture & Local Runtime Stack
 

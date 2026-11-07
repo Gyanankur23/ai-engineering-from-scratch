@@ -12,20 +12,40 @@
 </a>
 </p>
 
-<div align="center">
+**SYSTEM STATUS:** FORK OPERATIONAL [RUNNING LOCAL KERNEL & AGENT PROTOCOLS]  
+
+**WORKSPACE:** CUSTOM MODEL INTERNALS, RAG EVALS & AGENT RUNTIMES  
+
+**GRADER ENGINE:** STRICT VERIFICATION ENABLED (PASSED)
 
 ### ⚡ Engine Architecture & Local Runtime Stack
 
-```mermaid
-graph TD
-    A[Coding Agent / Host Interface] -->|MCP Protocol / JSON-RPC| B[Skill Execution Runtime]
-    B -->|Context Vectorization| C[Local PyTorch Engine / CUDA]
-    B -->|AST Validation & LINT| D[Static Code Grader]
-    C -->|Gradient Compute| E[Model Internals & KV Cache]
-    D -->|Evaluation Metrics| F[NDCG / Latency Benchmarks]
-
+```text
+┌─────────────────────────────────────────┐
+│     Coding Agent / Host Interface       │
+└───────────────────┬─────────────────────┘
+                    │ (MCP Protocol / JSON-RPC)
+                    ▼
+┌─────────────────────────────────────────┐
+│        Skill Execution Runtime          │
+└─────────┬───────────────────────┬───────┘
+          │                       │
+          ▼                       ▼
+┌───────────────────┐   ┌───────────────────┐
+│  Context Vector.  │   │ AST Val. & LINT   │
+└─────────┬─────────┘   └─────────┬─────────┘
+          │                       │
+          ▼                       ▼
+┌───────────────────┐   ┌───────────────────┐
+│ PyTorch / CUDA    │   │ Static Code Grader│
+└─────────┬─────────┘   └─────────┬─────────┘
+          │                       │
+          ▼                       ▼
+┌───────────────────┐   ┌───────────────────┐
+│ Model Internals   │   │ Evaluation Metrics│
+│   & KV Cache      │   │  (NDCG / Latency) │
+└───────────────────┘   └───────────────────┘
 ```
- 
 
 Implement model internals, retrieval pipelines, and agent runtimes. Test them, inspect failures, and keep the code and evaluation results.
 
